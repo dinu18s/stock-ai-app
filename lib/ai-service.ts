@@ -104,7 +104,7 @@ Respond ONLY with valid JSON following this exact typescript shape:
   ? "Data Unavailable"
   : quote.peRatio > 40
     ? "Premium / High Growth"
-    : "Moderate Valuation"
+    : "Moderate Valuation",
       marketCapContext: `Dominant large-cap tier with a $${quote.marketCap} capitalization.`,
       strengths: ["Strong institutional liquidity profile", "Predictable quarterly revenue generation"],
     },
