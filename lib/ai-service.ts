@@ -100,7 +100,11 @@ Respond ONLY with valid JSON following this exact typescript shape:
     sentiment,
     sentimentScore,
     fundamentals: {
-      peRating: quote.peRatio > 40 ? "Premium / High Growth" : "Moderate Valuation",
+      peRating: quote.peRatio == null
+  ? "Data Unavailable"
+  : quote.peRatio > 40
+    ? "Premium / High Growth"
+    : "Moderate Valuation"
       marketCapContext: `Dominant large-cap tier with a $${quote.marketCap} capitalization.`,
       strengths: ["Strong institutional liquidity profile", "Predictable quarterly revenue generation"],
     },
